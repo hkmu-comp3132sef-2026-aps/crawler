@@ -55,7 +55,7 @@ pub struct SchoolRaw {
 /// Structured school data.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct School {
-    pub school_id: String,
+    pub school_id: i64,
     pub lang: String,
     pub category: String,
     pub name: String,

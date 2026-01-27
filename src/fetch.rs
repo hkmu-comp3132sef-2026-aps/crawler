@@ -23,10 +23,8 @@ pub async fn fetch_schools() -> anyhow::Result<()> {
     println!("Building school upsert plans...");
 
     for data in raw {
-        let school_id: String = data.school_no.to_string();
-
-        let en = School {
-            school_id: school_id.clone(),
+        let en: School = School {
+            school_id: data.school_no,
             lang: "en".to_string(),
             category: data.category,
             name: data.name,
@@ -48,8 +46,8 @@ pub async fn fetch_schools() -> anyhow::Result<()> {
             plans.push(plan);
         }
 
-        let zh = School {
-            school_id,
+        let zh: School = School {
+            school_id: data.school_no,
             lang: "zh-hant".to_string(),
             category: data.中文類別,
             name: data.中文名稱,
