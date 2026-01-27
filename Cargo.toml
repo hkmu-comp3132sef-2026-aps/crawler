@@ -1,0 +1,12 @@
+[package]
+name = "crawler"
+edition = "2024"
+
+[dependencies]
+anyhow = "^1.0.100"
+dotenv_plus = "~0.5.1"
+mongodb = "^3.5.0"
+reqwest = { version = "~0.13.1", features = ["json"] }
+serde = "^1.0.228"
+serde_json = "^1.0.149"
+tokio = "^1.49.0"
