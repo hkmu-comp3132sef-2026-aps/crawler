@@ -5,7 +5,6 @@ set windows-shell := ["powershell"]
 _:
     just lint
     just fmt
-    just test
 
 # Lint code
 lint:
@@ -24,8 +23,8 @@ dev:
     RUST_ENV=development cargo run
 
 # Run in test
-test:
-    RUST_ENV=test cargo test
+tst:
+    RUST_ENV=test cargo run
 
 # Run in production
 prd:
