@@ -24,7 +24,7 @@ pub async fn fetch_schools() -> anyhow::Result<()> {
 
     for data in raw {
         let en: School = School {
-            school_id: data.school_no,
+            school_id: data.school_no.to_string(),
             lang: "en".to_string(),
             category: data.category,
             name: data.name,
@@ -47,7 +47,7 @@ pub async fn fetch_schools() -> anyhow::Result<()> {
         }
 
         let zh: School = School {
-            school_id: data.school_no,
+            school_id: data.school_no.to_string(),
             lang: "zh-hant".to_string(),
             category: data.中文類別,
             name: data.中文名稱,
